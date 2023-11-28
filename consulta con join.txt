@@ -1,0 +1,10 @@
+-- database: c:\Users\usuario\Desktop\database_sample\longlist.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+-- Recuerda darle al play gris, no al de arriba --
+SELECT authors.name FROM authors
+JOIN authored ON authors.id = authored.author_id
+JOIN books ON authored.book_id = books.id
+WHERE authors.country = 'Spain' 
+AND books.pages < 2000;
